@@ -1,6 +1,6 @@
 import os
 
-# 1. Database jadwal kamu (bisa dikembangkan pakai database beneran nanti)
+
 JADWAL_SAYA = {
     "senin": "Senin malam kamu jadwalnya belajar Cyber Security (Penetration Testing/OSINT).",
     "selasa": "Selasa malam waktunya coding project aplikasi desktop + penetration testing .",
@@ -24,9 +24,9 @@ def ai_assistant(pertanyaan):
             
     # Respon dari AI
     if hari_ditemukan:
-        return f"🤖 AI: {JADWAL_SAYA[hari_ditemukan]}"
+        return f" AI: {JADWAL_SAYA[hari_ditemukan]}"
     else:
-        return "🤖 AI: Maaf, aku tidak menangkap nama hari dalam pertanyaanmu. Coba tanya seperti: 'jadwal hari senin apa?'"
+        return " AI: Maaf, aku tidak menangkap nama hari dalam pertanyaanmu. Coba tanya seperti: 'jadwal hari senin apa?'"
 
 # 3. Jalankan program secara interaktif di terminal
 if __name__ == "__main__":
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     while True:
         user_input = input("User: ")
         if user_input.lower() == 'keluar':
-            print("🤖 AI: Sampai jumpa! Semangat belajarnya!")
+            print(" AI: Sampai jumpa! Semangat belajarnya!")
             break
             
         jawaban = ai_assistant(user_input)
